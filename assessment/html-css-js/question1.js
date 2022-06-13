@@ -38,8 +38,20 @@ const organizations = [
 // Bonus point if you think about the time complexity, a fast solution, these arrays can be huge (thousands of elements maybe!)
 // SOLUTION:
 
+var organizationsMap = {};
 
+for (let i=0;i<organizations.length;i++){
+  let id = organizations[i].id;
+  organizationsMap[id] = organizations[i].name;
+}
 
+var positionsWithOrgNames = [];
+
+for (let i=0; i< positions.length;i++){
+  let orgId = positions[i].orgId;
+  let newObject = {"name": positions[i].name, "orgName":organizationsMap[orgId]}
+  positionsWithOrgNames.push(newObject);
+}
 
 // so that when we log the final result
 console.log(positionsWithOrgNames)
