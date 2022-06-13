@@ -9,3 +9,22 @@
 // For 'Go Up and Down' button, it should go up touch the top of the viewport and return to middle in 1 second
 // Example is presented in question4.gif
 // Don't forget to add your css and javascript to index.html file
+
+function rotate(){
+    var targetElement = document.getElementById("to-be-animated");
+    targetElement.classList.add("rotate");
+
+    setTimeout(() => {
+        targetElement.classList.remove("rotate");
+    }, 1000)
+}
+
+function up_down(){
+    console.log("up_down");
+    var targetElement = document.getElementById("to-be-animated");
+    targetElement.classList.add("up_down");
+
+    setTimeout(() => {
+        targetElement.classList.remove("up_down");
+    }, 1000)
+}
