@@ -8,4 +8,18 @@
 
 // Hint: google 'debouncing'
 
-// SOLUTION:
+// SOLUTION:  
+
+
+function func(value){
+    console.log(value);
+}
+
+var input = document.getElementById("a_text");
+
+input.addEventListener("input", function(){
+    setTimeout(() => {
+        func(this.value);
+      }, 500);
+    
+})
