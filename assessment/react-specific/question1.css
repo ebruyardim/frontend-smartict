@@ -1,1 +1,10 @@
 /* Do a basic table styling for borders, doesn't need to be exactly same with the gif */
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+  
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
